@@ -9,8 +9,7 @@ class Solution:
         return rob2
     
     def rob2(self, nums: list[int]):
-        arr1, arr2 = nums[1:], nums[:-1]
-        return max(self.rob(arr1), self.rob(arr2))
+        return max(nums[0],self.rob(nums[1:]), self.rob(nums[:-1]))
 
 sol = Solution()
 
