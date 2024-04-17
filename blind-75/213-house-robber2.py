@@ -1,5 +1,5 @@
 class Solution:
-    def rob(self, nums: list[int]) -> int:
+    def rob1(self, nums: list[int]) -> int:
         rob1, rob2 = 0, 0
         
         for n in nums:
@@ -8,8 +8,8 @@ class Solution:
             rob2 = temp
         return rob2
     
-    def rob2(self, nums: list[int]):
-        return max(nums[0],self.rob(nums[1:]), self.rob(nums[:-1]))
+    def rob(self, nums: list[int]):
+        return max(nums[0],self.rob1(nums[1:]), self.rob1(nums[:-1]))
 
 sol = Solution()
 

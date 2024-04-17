@@ -1,14 +1,13 @@
 class Solution:
     def combinationSum4(self, nums: list[int], target: int) -> int:
-        dp = {0: 1}
+        dp = {0:1}
         
-        for total in range(1,target +1):
+        for total in range(1, total+1):
             dp[total] = 0
-            # print(dp)
+            
             for n in nums:
-                dp[total] += dp.get(total-n, 0)
-                print(dp)
-                
+                dp[total] = dp.get(total-n, 0)
+        
         return dp[target]
     
 sol = Solution()
