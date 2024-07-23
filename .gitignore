@@ -1,0 +1,3 @@
+#ignoring binaries
+
+__pycache__/
