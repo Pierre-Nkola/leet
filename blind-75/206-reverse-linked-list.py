@@ -14,3 +14,22 @@ class Solution:
             prev = curr
             curr = nxt
         return prev
+    
+def printList(head: Optional[ListNode]) -> None:
+    while head:
+        print(head.val, end=' ')
+        head = head.next
+    print()
+
+# Example usage
+sol = Solution()
+
+# Create a linked list: 1 -> 2 -> 3 -> 4
+head = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
+
+# Swap pairs
+new_head = sol.reverseList(head)
+
+# Print the result: 2 -> 1 -> 4 -> 3
+printList(new_head)
+
